@@ -11,6 +11,6 @@ Redmine::WikiFormatting::Macros.register do
   macro :cacoo do |obj, args|
     raise "Cacoo diagram ID is missing." if args.size == 0
     diagram_id = args.first
-    tag(:iframe, :src => 'https://cacoo.com/diagrams/' + CGI.escape(diagram_id) + '/view', :width => 402, :height => 330, :frameborder => 0, :scrolling => 'no')
+    content_tag(:iframe, '', :src => 'https://cacoo.com/diagrams/' + CGI.escape(diagram_id) + '/view', :width => 402, :height => 330, :frameborder => 0, :scrolling => 'no')
   end
 end
